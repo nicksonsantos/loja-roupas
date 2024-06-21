@@ -1,0 +1,34 @@
+/* Estilo para truncar o título do produto em uma linha */
+.titulo-produto {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+/* Ajustar o tamanho dos cards */
+.card {
+  height: 100%;
+}
+
+.card-img-top {
+  height: 150px; /* Ajuste conforme necessário */
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.card-text {
+  font-size: 0.875rem;
+}
+
+.btn {
+  font-size: 0.875rem;
+  padding: 5px 10px;
+}

@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-12 col-md-3 mb-4" *ngFor="let produto of produtos">
+    <div class="card mb-4">
+      <img [src]="produto.imagens[0]" class="card-img-top" alt="{{ produto.titulo }}">
+      <div class="card-body d-grid gap-2">
+        <h5 class="card-title titulo-produto">{{ produto.titulo }}</h5>
+        <!-- <p class="card-text">{{ produto.descricao }}</p> -->
+        <p class="card-text">{{ produto.preco | currency }}</p>
+        <button class="btn btn-secondary" (click)="adicionarAoCarrinho(produto)">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </div>
+</div>

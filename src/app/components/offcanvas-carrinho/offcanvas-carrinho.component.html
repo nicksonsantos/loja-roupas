@@ -1,0 +1,17 @@
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title">Carrinho de Compras</h5>
+  <button type="button" class="btn-close" aria-label="Fechar" (click)="fechar()"></button>
+</div>
+<div class="offcanvas-body">
+  <div *ngFor="let item of carrinhoService.getItens()" class="cart-item d-flex align-items-center mb-3">
+    <img [src]="item.imagens[0]" class="img-thumbnail" alt="{{ item.titulo }}" width="60">
+    <div class="ms-3">
+      <h6 class="mb-1">{{ item.titulo }}</h6>
+      <p class="mb-0">{{ item.preco | currency }}</p>
+    </div>
+  </div>
+  <div *ngIf="!carrinhoService.getItens().length">
+    <p>Seu carrinho está vazio.</p>
+  </div>
+  <button class="btn btn-primary mt-3">Finalizar Compra</button>
+</div>

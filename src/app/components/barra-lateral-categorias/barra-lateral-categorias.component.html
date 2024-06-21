@@ -1,0 +1,9 @@
+<h5>Categorias</h5>
+<ul class="list-group">
+  <li class="list-group-item" (click)="filtrar(0)">Todas</li>
+  <ng-container *ngFor="let categoria of categorias">
+    <li class="list-group-item" (click)="filtrar(categoria.id)">
+      <a href="#" class="text-decoration-none text-dark">{{ categoria.nome }}</a>
+    </li>
+  </ng-container>
+</ul>
